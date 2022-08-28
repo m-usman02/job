@@ -1,0 +1,23 @@
+models:
+  Job:
+    customer_id : bigInteger
+    job_id: string:255
+    type: string:255
+    issue_described: nullable string:1000
+    issue_found: nullable string:1000
+    status: string:255
+    complemetion_date: string:255
+    price: double:8,2
+    note: nullable string:2000
+
+controllers:
+  Job:
+    index:
+      query: all
+      render: job.index with:customer
+
+    store:
+      validate: type, issue_described, issue_found
+      save: job
+   
+      redirect: job.index

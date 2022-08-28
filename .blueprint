@@ -1,0 +1,12 @@
+created:
+    - app/Http/Controllers/JobController.php
+    - database/factories/JobFactory.php
+    - database/migrations/2022_05_16_161018_create_jobs_table.php
+    - app/Models/Job.php
+    - tests/Feature/Http/Controllers/JobControllerTest.php
+updated:
+    - routes/web.php
+skipped:
+    - resources/views/job/index.blade.php
+models:
+    Job: { customer_id: bigInteger, job_id: 'string:255', type: 'string:255', issue_described: 'nullable string:1000', issue_found: 'nullable string:1000', status: 'string:255', complemetion_date: 'string:255', price: 'double:8,2', note: 'nullable string:2000' }
